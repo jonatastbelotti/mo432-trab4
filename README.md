@@ -14,9 +14,10 @@ O arquivo ``requeriments.txt`` contém todas as bibliotecas necessárias para ex
 Instale todas as bibliotecas em um ``virtualenv`` através dos comandos:
 
 
-```
+```linux
 $ python3 -m venv ./venv
 $ source venv/bin/activate
+$ pip install --upgrade pip
 $ pip3 install -r requirements.txt
 ```
 
