@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
 
 class Dados():
 
@@ -43,13 +46,13 @@ class Dados():
                     if not np.isnan(self.dados[i_proximo]):
                         val_proximo = self.dados[i_proximo]
                         break
-                
+
                 if val_anterior is not None and val_proximo is not None:
                     self.dados[i] = (val_anterior + val_proximo) / 2.0
                 else:
                     self.dados[i] = val_proximo if val_proximo is not None else self.dados[i]
                     self.dados[i] = val_anterior if val_anterior is not None else self.dados[i]
-        
+
         print("Foram corrigidos %d registros nulos" % num)
 
 
@@ -60,6 +63,14 @@ class Dados():
 
         self.dados_treino = self.dados[0:registros_treino]
         self.dados_medida = self.dados[registros_treino:registros_treino+registros_medida]
+
+        # scaler = MinMaxScaler(feature_range=(0, 1))
+        # scaler.fit(self.dados_treino)
+        # self.dados_treino = scaler.transform(self.dados_treino)
+        # self.dados_medida = scaler.transform(self.dados_medida)
+
+        # self.dados_treino = self.dados_treino.reshape(-1)
+        # self.dados_medida = self.dados_medida.reshape(-1)
 
 
     def get_dados_classificacao(self, num_entradas):
@@ -95,7 +106,7 @@ class Dados():
                     entradas.append(self.dados_treino[i_aux])
                 else:
                     break
-            
+
             if len(entradas) > 0:
                 x_treino.append(entradas)
                 if classificacao:
@@ -112,7 +123,7 @@ class Dados():
                     entradas.append(self.dados_medida[i_aux])
                 else:
                     entradas.append(self.dados_treino[i_aux])
-            
+
             if len(entradas) > 0:
                 x_medida.append(entradas)
                 if classificacao:
@@ -123,6 +134,18 @@ class Dados():
         # Convertendo em Arrays Numpy
         x_treino, y_treino = np.array(x_treino), np.array(y_treino)
         x_medida, y_medida = np.array(x_medida), np.array(y_medida)
+
+        # # Aplicando o centering and Scaling
+        # scaler = StandardScaler()
+        # scaler.fit(x_treino)
+        # x_treino, x_medida = scaler.transform(x_treino), scaler.transform(x_medida)
+
+        # Aplicando PCA
+        pca = PCA(0.9)
+        pca.fit(x_treino)
+        x_treino = pca.transform(x_treino)
+        x_medida = pca.transform(x_medida)
+
 
         return x_treino, y_treino, x_medida, y_medida
 
