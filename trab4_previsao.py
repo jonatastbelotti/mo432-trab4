@@ -17,9 +17,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import GradientBoostingRegressor
 
 
-
-
-
 # DEFINIÇÕES
 ARQUIVO_ENTRADA = "./dados4.csv"
 PORCENT_MEDIDA = 10
@@ -102,11 +99,13 @@ if __name__ == "__main__":
 
     # Lendo os dados de entrada
     dados = Dados(ARQUIVO_ENTRADA, PORCENT_TREINAMENTO, PORCENT_MEDIDA)
+    dados.plotar_grafico_completo()
 
     melhor_num_entradas = None
     melhor_modelo = None
     melhor_parametros = None
     melhor_score = float("inf")
+    melhor_resultado = None
     tempo_inicial = time.time()
 
     for num_entradas in np.arange(2, 15+1, 1):
@@ -124,12 +123,16 @@ if __name__ == "__main__":
             melhor_modelo = treinador.melhor_modelo
             melhor_parametros = treinador.melhor_parametros
             melhor_score = treinador.melhor_score
+            melhor_resultado = treinador.melhor_resultado
 
         print("\n")
 
     # Calculando tempo total
     tempo_final = time.time()
     tempo_total = tempo_final - tempo_inicial
+
+    # Plotando gráfico final da melhor previsão
+    dados.plot_grafico_previsao(melhor_resultado)
 
     # Imprimindo melhor resultado entre todos números de entradas
     print("====================================================================================================")

@@ -1,8 +1,11 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
+
+plt.style.use('fivethirtyeight')
 
 class Dados():
 
@@ -18,11 +21,12 @@ class Dados():
 
     def ler_arquivo_csv(self):
         """Função que faz a leitura do arquivo de entrada"""
-        df = pd.read_csv(self.arquivo).drop(["Data"], axis=1)
+        df = pd.read_csv(self.arquivo)
         df = df.replace(to_replace="-", value=np.nan)
         resp = df["Taxa"].to_numpy(dtype=np.number, na_value=None)
 
         self.dados = np.flip(resp)
+        self.datas = np.flip(df["Data"].to_numpy())
 
         print("Arquivo de entrada: %s com %d registros" % (self.arquivo, self.dados.shape[0]))
 
@@ -151,4 +155,44 @@ class Dados():
 
 
         return x_treino, y_treino, x_medida, y_medida
+
+
+    def plotar_grafico_completo(self, caminho="./graficos/dados_completo.png"):
+        indices_x, labels_x = list(), list()
+        d_antiga = None
+        for i, d in enumerate(self.datas):
+            d_atual = d.split("-")[0]
+            if d_atual != d_antiga:
+                indices_x.append(i+1)
+                labels_x.append(d_atual)
+                d_antiga = d_atual
+
+        plt.figure(figsize=(16, 9))
+        plt.title('Dados da série completa')
+        plt.plot(self.dados, lw=2)
+        plt.xticks(indices_x, labels_x)
+        plt.xlabel('Data', fontsize=18)
+        plt.ylabel('Taxa de cambio', fontsize=18)
+        plt.savefig(caminho, dpi=300)
+
+
+    def plot_grafico_previsao(self, previsao, caminho="./graficos/previsao.png"):
+        indices_x, labels_x = list(), list()
+        d_antiga = "05/2018"
+        for i, d in enumerate(self.datas[-(previsao.shape[0]):]):
+            d_atual = "%s/%s" % (d.split("-")[1], d.split("-")[0])
+            if d_atual != d_antiga and any(txt in d_atual for txt in ["05/", "07/", "09/", "11/", "01/", "03/"]):
+                indices_x.append(i+1)
+                labels_x.append(d_atual)
+                d_antiga = d_atual
+
+        plt.figure(figsize=(16, 9))
+        plt.title('Valor real vs Valor Previsto')
+        plt.plot(self.dados_medida, lw=3)
+        plt.plot(previsao, lw=2)
+        plt.xticks(indices_x, labels_x)
+        plt.xlabel('Data', fontsize=18)
+        plt.ylabel('Taxa de cambio', fontsize=18)
+        plt.legend(['Valor real', 'Valor previsto'], loc='upper right')
+        plt.savefig(caminho, dpi=300)
 
