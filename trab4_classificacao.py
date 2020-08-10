@@ -114,7 +114,7 @@ if __name__ == "__main__":
     melhor_score = float("-inf")
     tempo_inicial = time.time()
 
-    for num_entradas in np.arange(1, 5+1, 1):
+    for num_entradas in np.arange(1, 15+1, 1):
         print("\n====================================================================================================")
         print("Número de entradas -> %d" % num_entradas)
 

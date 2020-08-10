@@ -1,4 +1,6 @@
-from trab4.lib import dict_string
+import time
+
+from trab4.lib import dict_string, format_tempo
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import TimeSeriesSplit
 
@@ -23,6 +25,7 @@ class Treinador():
         self.melhor_parametros = None
         self.melhor_score = float("-inf") if maior_melhor else float("inf")
         self.melhor_modelo = None
+        tempo_inicial = time.time()
 
         for modelo in modelos:
             # Testando todas as combinações de todos os parâmetros
@@ -44,6 +47,13 @@ class Treinador():
                 self.melhor_score = score_final
                 self.melhor_modelo = modelo
 
-        print("\nMelhor modelo: %s" % self.melhor_modelo['nome'])
+        # Calculando tempo total
+        tempo_final = time.time()
+        tempo_total = tempo_final - tempo_inicial
+
+        # Imprimindo resultados
+        print("\n")
+        print("Tempo execução: %s" % format_tempo(tempo_total))
+        print("Melhor modelo: %s" % self.melhor_modelo['nome'])
         print("Parâmetros: %s" % dict_string(self.melhor_parametros))
         print("Score conjunto medida: %.6f" % self.melhor_score)
