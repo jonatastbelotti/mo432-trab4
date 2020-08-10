@@ -3,6 +3,7 @@ import random
 
 from trab4.dados import Dados
 from trab4.treinador import Treinador
+from trab4.lib import dict_string
 from sklearn.linear_model import LogisticRegression
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
@@ -39,16 +40,16 @@ if __name__ == "__main__":
                 'C': 10 ** np.random.uniform(-3, 3, 10)
             }
         },
-        # {
-        #     'nome': "LDA",
-        #     'classe': LinearDiscriminantAnalysis,
-        #     'parametros': {}
-        # },
-        # {
-        #     'nome': "QDA",
-        #     'classe': QuadraticDiscriminantAnalysis,
-        #     'parametros': {}
-        # },
+        {
+            'nome': "LDA",
+            'classe': LinearDiscriminantAnalysis,
+            'parametros': {}
+        },
+        {
+            'nome': "QDA",
+            'classe': QuadraticDiscriminantAnalysis,
+            'parametros': {}
+        },
         # {
         #     'nome': "SVM Linear",
         #     'classe': LinearSVC,
@@ -82,7 +83,7 @@ if __name__ == "__main__":
         #     'classe': MLPClassifier,
         #     'parametros': {
         #         'max_iter': [400],
-        #         'hidden_layer_sizes': np.arange(5, 20+1, 5)
+        #         'hidden_layer_sizes': np.arange(5, 100+1, 5)
         #     }
         # },
         # {
@@ -106,13 +107,34 @@ if __name__ == "__main__":
     # Lendo os dados de entrada
     dados = Dados(ARQUIVO_ENTRADA, PORCENT_TREINAMENTO, PORCENT_MEDIDA)
 
-    for num_entradas in np.arange(2, 5+1, 1):
+    melhor_num_entradas = None
+    melhor_modelo = None
+    melhor_parametros = None
+    melhor_score = float("-inf")
+
+    for num_entradas in np.arange(1, 5+1, 1):
         print("\n====================================================================================================")
         print("Número de entradas -> %d" % num_entradas)
 
         x_treino, y_treino, x_medida, y_medida = dados.get_dados_classificacao(num_entradas)
 
         treinador = Treinador()
-        treinador.treinar_modelo(x_treino, y_treino, x_medida, y_medida, MODELOS, scoring="accuracy", classificacao=True, maior_melhor=True)
+        treinador.treinar_modelo(x_treino, y_treino, x_medida, y_medida, MODELOS, scoring="accuracy", maior_melhor=True)
+
+        # Verficando qual o melhor modelo dentre todos
+        if treinador.melhor_score > melhor_score:
+            melhor_num_entradas = num_entradas
+            melhor_modelo = treinador.melhor_modelo
+            melhor_parametros = treinador.melhor_parametros
+            melhor_score = treinador.melhor_score
 
         print("\n")
+
+    # Imprimindo melhor resultado entre todos números de entradas
+    print("====================================================================================================")
+    print("====================================================================================================")
+    print("====================================================================================================")
+    print("Melhor número entradas: %d" % melhor_num_entradas)
+    print("Melhor modelo: %s" % melhor_modelo['nome'])
+    print("Melhores parâmetros: %s" % dict_string(melhor_parametros))
+    print("Melhor acurária conjunto medida: %.6f" % melhor_score)
