@@ -73,21 +73,21 @@ class Dados():
         # self.dados_medida = self.dados_medida.reshape(-1)
 
 
-    def get_dados_classificacao(self, num_entradas):
+    def get_dados_classificacao(self, num_entradas, faz_cs, faz_pca):
         """
         Função que separa os conjuntos de entradas e de saídas para classificação.
         """
-        return self.__get_dados(num_entradas, classificacao=True)
+        return self.__get_dados(num_entradas, classificacao=True, faz_cs=faz_cs, faz_pca=faz_pca)
 
 
-    def get_dados_previsao(self, tam_janela):
+    def get_dados_previsao(self, tam_janela, faz_cs, faz_pca):
         """
         Função que separa os conjuntos de entradas e de saídas para previsão.
         """
-        return self.__get_dados(tam_janela, classificacao=True)
+        return self.__get_dados(tam_janela, classificacao=False, faz_cs=faz_cs, faz_pca=faz_pca)
 
 
-    def __get_dados(self, num_entradas, classificacao=False):
+    def __get_dados(self, num_entradas, classificacao=False, faz_cs=True, faz_pca=True):
         """
         Função que separa os conjuntos de entradas e de saídas para classificação e previsão.
         Se classificação 1 significa que aumentou em relação ao dia anterior, 0 que não aumentou.
@@ -135,16 +135,19 @@ class Dados():
         x_treino, y_treino = np.array(x_treino), np.array(y_treino)
         x_medida, y_medida = np.array(x_medida), np.array(y_medida)
 
-        # # Aplicando o centering and Scaling
-        # scaler = StandardScaler()
-        # scaler.fit(x_treino)
-        # x_treino, x_medida = scaler.transform(x_treino), scaler.transform(x_medida)
+        # Aplicando o centering and Scaling
+        if faz_cs:
+            scaler = StandardScaler()
+            scaler.fit(x_treino)
+            x_treino, x_medida = scaler.transform(x_treino), scaler.transform(x_medida)
 
         # Aplicando PCA
-        pca = PCA(0.9)
-        pca.fit(x_treino)
-        x_treino = pca.transform(x_treino)
-        x_medida = pca.transform(x_medida)
+        if faz_pca:
+            pca = PCA(0.9)
+            pca.fit(x_treino)
+            x_treino = pca.transform(x_treino)
+            x_medida = pca.transform(x_medida)
+            print("O PCA deixou %d atributos" % x_treino.shape[1])
 
 
         return x_treino, y_treino, x_medida, y_medida

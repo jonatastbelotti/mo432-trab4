@@ -8,3 +8,19 @@ def dict_string(dicionario={}):
         partes.append("%s=%s" % (k, str(v)))
 
     return ", ".join(partes)
+
+
+# Função que recebe um float com uma quantidade de segundos e retorna uma String com esse tempo formatado
+def format_tempo(segundos):
+    temp = segundos
+    unidade = "segundos"
+
+    if temp >= 60:
+        temp = temp / 60.0
+        unidade = "minutos"
+
+    if temp >= 60:
+        temp = temp / 60.0
+        unidade = "horas"
+
+    return "%.2f %s" % (temp, unidade)

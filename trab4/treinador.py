@@ -2,6 +2,9 @@ from trab4.lib import dict_string
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import TimeSeriesSplit
 
+# Número de núcleos que serão utilizados, -1 usa todos, -2 deixa um sem usar
+N_JOBS = -2
+
 
 class Treinador():
     """
@@ -23,7 +26,7 @@ class Treinador():
 
         for modelo in modelos:
             # Testando todas as combinações de todos os parâmetros
-            grid = GridSearchCV(estimator=modelo['classe'](), param_grid=modelo['parametros'], scoring=scoring, cv=TimeSeriesSplit(n_splits=5), n_jobs=-2)
+            grid = GridSearchCV(estimator=modelo['classe'](), param_grid=modelo['parametros'], scoring=scoring, cv=TimeSeriesSplit(n_splits=5), n_jobs=N_JOBS)
             grid.fit(x_treino, y_treino)
             score_treino = abs(grid.best_score_)
             parametros = grid.best_params_
