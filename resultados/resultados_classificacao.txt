@@ -5,21 +5,21 @@ Foram corrigidos 62 registros nulos
 Número de entradas -> 1
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.481243, 0.464158)
-Regressão Logística com Regularização L2: C=0.003875361811798551, max_iter=200, penalty=l2 -> (0.485544, 0.476703)
+Regressão Logística com Regularização L2: C=0.0012665962680961736, max_iter=200, penalty=l2 -> (0.486738, 0.478495)
 LDA:  -> (0.481243, 0.464158)
 QDA:  -> (0.494146, 0.467742)
-SVM Linear: C=1580.1019059749194 -> (0.503226, 0.521505)
-SVM com kernel RBF: C=0.3614465813424658, gamma=1.346653414084587, kernel=rbf -> (0.498447, 0.521505)
+SVM Linear: C=477.3737065228826 -> (0.509916, 0.478495)
+SVM com kernel RBF: C=1.2771882945666169, gamma=0.13492859536349316, kernel=rbf -> (0.499403, 0.519713)
 Naive Bayes:  -> (0.494385, 0.467742)
-KNN: n_neighbors=181 -> (0.498686, 0.523297)
-MLP: hidden_layer_sizes=140, max_iter=400 -> (0.499164, 0.471326)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486738, 0.478495)
-GBM: learning_rate=0.14087474916956952, max_depth=5, n_estimators=81 -> (0.510633, 0.474910)
+KNN: n_neighbors=229 -> (0.501792, 0.523297)
+MLP: hidden_layer_sizes=30, max_iter=400 -> (0.501553, 0.521505)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.504182, 0.491039)
+GBM: learning_rate=0.139660744473391, max_depth=5, n_estimators=88 -> (0.508244, 0.474910)
 
 
-Tempo execução: 24.61 segundos
+Tempo execução: 24.58 segundos
 Melhor modelo: KNN
-Parâmetros: n_neighbors=181
+Parâmetros: n_neighbors=229
 Score conjunto medida: 0.523297
 
 
@@ -28,21 +28,21 @@ Score conjunto medida: 0.523297
 Número de entradas -> 2
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.483014, 0.473118)
-Regressão Logística com Regularização L2: C=0.003875361811798551, max_iter=200, penalty=l2 -> (0.485407, 0.465950)
+Regressão Logística com Regularização L2: C=0.0012665962680961736, max_iter=200, penalty=l2 -> (0.485407, 0.478495)
 LDA:  -> (0.483014, 0.473118)
 QDA:  -> (0.494258, 0.474910)
-SVM Linear: C=47.50323156560205 -> (0.491148, 0.521505)
-SVM com kernel RBF: C=0.9461462904890385, gamma=0.0689011028402124, kernel=rbf -> (0.499522, 0.514337)
+SVM Linear: C=16469.566577805694 -> (0.514354, 0.521505)
+SVM com kernel RBF: C=0.3990944310717145, gamma=0.13492859536349316, kernel=rbf -> (0.498804, 0.521505)
 Naive Bayes:  -> (0.494498, 0.473118)
-KNN: n_neighbors=51 -> (0.507656, 0.500000)
-MLP: hidden_layer_sizes=60, max_iter=400 -> (0.498325, 0.521505)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486364, 0.478495)
-GBM: learning_rate=0.22474792763733994, max_depth=5, n_estimators=47 -> (0.505502, 0.483871)
+KNN: n_neighbors=1 -> (0.504067, 0.465950)
+MLP: hidden_layer_sizes=95, max_iter=400 -> (0.499522, 0.491039)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.505742, 0.478495)
+GBM: learning_rate=0.139660744473391, max_depth=5, n_estimators=81 -> (0.505502, 0.485663)
 
 
-Tempo execução: 24.61 segundos
+Tempo execução: 23.89 segundos
 Melhor modelo: SVM Linear
-Parâmetros: C=47.50323156560205
+Parâmetros: C=16469.566577805694
 Score conjunto medida: 0.521505
 
 
@@ -51,22 +51,22 @@ Score conjunto medida: 0.521505
 Número de entradas -> 3
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.483493, 0.460573)
-Regressão Logística com Regularização L2: C=9.260991177859752, max_iter=200, penalty=l2 -> (0.484211, 0.460573)
+Regressão Logística com Regularização L2: C=0.0012665962680961736, max_iter=200, penalty=l2 -> (0.484450, 0.476703)
 LDA:  -> (0.483254, 0.460573)
 QDA:  -> (0.495215, 0.483871)
-SVM Linear: C=1580.1019059749194 -> (0.512201, 0.478495)
-SVM com kernel RBF: C=146.92352309905192, gamma=0.011037640408292035, kernel=rbf -> (0.499043, 0.516129)
+SVM Linear: C=16469.566577805694 -> (0.510526, 0.478495)
+SVM com kernel RBF: C=0.222597736987599, gamma=0.13492859536349316, kernel=rbf -> (0.501914, 0.521505)
 Naive Bayes:  -> (0.495215, 0.483871)
-KNN: n_neighbors=93 -> (0.502871, 0.501792)
-MLP: hidden_layer_sizes=10, max_iter=400 -> (0.505024, 0.521505)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486364, 0.478495)
-GBM: learning_rate=0.17794597602096698, max_depth=3, n_estimators=65 -> (0.511722, 0.516129)
+KNN: n_neighbors=227 -> (0.500957, 0.523297)
+MLP: hidden_layer_sizes=45, max_iter=400 -> (0.499043, 0.521505)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.498565, 0.521505)
+GBM: learning_rate=0.1684089673680646, max_depth=3, n_estimators=68 -> (0.512919, 0.507168)
 
 
-Tempo execução: 27.62 segundos
-Melhor modelo: MLP
-Parâmetros: hidden_layer_sizes=10, max_iter=400
-Score conjunto medida: 0.521505
+Tempo execução: 23.25 segundos
+Melhor modelo: KNN
+Parâmetros: n_neighbors=227
+Score conjunto medida: 0.523297
 
 
 
@@ -74,22 +74,22 @@ Score conjunto medida: 0.521505
 Número de entradas -> 4
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.491627, 0.465950)
-Regressão Logística com Regularização L2: C=0.04313501951135857, max_iter=200, penalty=l2 -> (0.491866, 0.465950)
+Regressão Logística com Regularização L2: C=0.10340857359008827, max_iter=200, penalty=l2 -> (0.491866, 0.467742)
 LDA:  -> (0.491627, 0.465950)
 QDA:  -> (0.493780, 0.482079)
-SVM Linear: C=708.6232852922866 -> (0.510766, 0.521505)
-SVM com kernel RBF: C=21250.979091752728, gamma=1.346653414084587, kernel=rbf -> (0.501435, 0.525090)
+SVM Linear: C=492.4442320956804 -> (0.511722, 0.478495)
+SVM com kernel RBF: C=0.222597736987599, gamma=0.08898846336826484, kernel=rbf -> (0.500718, 0.521505)
 Naive Bayes:  -> (0.493780, 0.480287)
-KNN: n_neighbors=89 -> (0.501196, 0.523297)
-MLP: hidden_layer_sizes=30, max_iter=400 -> (0.500000, 0.537634)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486364, 0.478495)
-GBM: learning_rate=0.029563312504696175, max_depth=2, n_estimators=27 -> (0.494737, 0.478495)
+KNN: n_neighbors=1 -> (0.497847, 0.498208)
+MLP: hidden_layer_sizes=115, max_iter=400 -> (0.500000, 0.508961)
+Arvore de decisão: ccp_alpha=0.001265748631790493 -> (0.494737, 0.478495)
+GBM: learning_rate=0.060789552772529475, max_depth=2, n_estimators=11 -> (0.493062, 0.478495)
 
 
-Tempo execução: 36.53 segundos
-Melhor modelo: MLP
-Parâmetros: hidden_layer_sizes=30, max_iter=400
-Score conjunto medida: 0.537634
+Tempo execução: 26.21 segundos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=0.222597736987599, gamma=0.08898846336826484, kernel=rbf
+Score conjunto medida: 0.521505
 
 
 
@@ -97,22 +97,22 @@ Score conjunto medida: 0.537634
 Número de entradas -> 5
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.488995, 0.469534)
-Regressão Logística com Regularização L2: C=9.260991177859752, max_iter=200, penalty=l2 -> (0.488995, 0.469534)
+Regressão Logística com Regularização L2: C=10.223005061931921, max_iter=200, penalty=l2 -> (0.488995, 0.469534)
 LDA:  -> (0.488995, 0.469534)
 QDA:  -> (0.495455, 0.476703)
-SVM Linear: C=708.6232852922866 -> (0.510526, 0.501792)
-SVM com kernel RBF: C=146.92352309905192, gamma=0.005785914391123155, kernel=rbf -> (0.499282, 0.496416)
+SVM Linear: C=2273.302682434829 -> (0.512201, 0.521505)
+SVM com kernel RBF: C=55.09172415868063, gamma=0.01168835582019618, kernel=rbf -> (0.498325, 0.519713)
 Naive Bayes:  -> (0.495694, 0.476703)
-KNN: n_neighbors=251 -> (0.499761, 0.526882)
-MLP: hidden_layer_sizes=60, max_iter=400 -> (0.500718, 0.534050)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486364, 0.478495)
-GBM: learning_rate=0.17794597602096698, max_depth=5, n_estimators=81 -> (0.498804, 0.487455)
+KNN: n_neighbors=229 -> (0.497608, 0.523297)
+MLP: hidden_layer_sizes=30, max_iter=400 -> (0.500239, 0.482079)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.498804, 0.521505)
+GBM: learning_rate=0.2715551307766882, max_depth=5, n_estimators=68 -> (0.500478, 0.476703)
 
 
-Tempo execução: 30.52 segundos
-Melhor modelo: MLP
-Parâmetros: hidden_layer_sizes=60, max_iter=400
-Score conjunto medida: 0.534050
+Tempo execução: 26.71 segundos
+Melhor modelo: KNN
+Parâmetros: n_neighbors=229
+Score conjunto medida: 0.523297
 
 
 
@@ -120,22 +120,22 @@ Score conjunto medida: 0.534050
 Número de entradas -> 6
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.491627, 0.449821)
-Regressão Logística com Regularização L2: C=0.4608355652731741, max_iter=200, penalty=l2 -> (0.491866, 0.449821)
+Regressão Logística com Regularização L2: C=0.10340857359008827, max_iter=200, penalty=l2 -> (0.491866, 0.455197)
 LDA:  -> (0.491866, 0.449821)
 QDA:  -> (0.495694, 0.467742)
-SVM Linear: C=70.41568016985414 -> (0.503589, 0.478495)
-SVM com kernel RBF: C=19807.477684510697, gamma=0.3399797737808239, kernel=rbf -> (0.502632, 0.530466)
+SVM Linear: C=16469.566577805694 -> (0.512201, 0.478495)
+SVM com kernel RBF: C=0.3990944310717145, gamma=0.03736092784292749, kernel=rbf -> (0.500478, 0.507168)
 Naive Bayes:  -> (0.495933, 0.467742)
-KNN: n_neighbors=75 -> (0.499522, 0.503584)
-MLP: hidden_layer_sizes=5, max_iter=400 -> (0.500957, 0.503584)
-Arvore de decisão: ccp_alpha=0.003047671501934577 -> (0.486842, 0.478495)
-GBM: learning_rate=0.23891677122923946, max_depth=3, n_estimators=65 -> (0.494258, 0.516129)
+KNN: n_neighbors=244 -> (0.500478, 0.512545)
+MLP: hidden_layer_sizes=5, max_iter=400 -> (0.506220, 0.521505)
+Arvore de decisão: ccp_alpha=0.001265748631790493 -> (0.487560, 0.478495)
+GBM: learning_rate=0.26987855752465373, max_depth=2, n_estimators=81 -> (0.498086, 0.507168)
 
 
-Tempo execução: 35.60 segundos
-Melhor modelo: SVM com kernel RBF
-Parâmetros: C=19807.477684510697, gamma=0.3399797737808239, kernel=rbf
-Score conjunto medida: 0.530466
+Tempo execução: 26.33 segundos
+Melhor modelo: MLP
+Parâmetros: hidden_layer_sizes=5, max_iter=400
+Score conjunto medida: 0.521505
 
 
 
@@ -143,22 +143,22 @@ Score conjunto medida: 0.530466
 Número de entradas -> 7
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.496172, 0.462366)
-Regressão Logística com Regularização L2: C=0.03504853119747364, max_iter=200, penalty=l2 -> (0.496890, 0.462366)
+Regressão Logística com Regularização L2: C=0.05762721573666136, max_iter=200, penalty=l2 -> (0.496890, 0.462366)
 LDA:  -> (0.496411, 0.462366)
 QDA:  -> (0.493062, 0.456989)
-SVM Linear: C=70.41568016985414 -> (0.512201, 0.478495)
-SVM com kernel RBF: C=146.92352309905192, gamma=0.005785914391123155, kernel=rbf -> (0.500000, 0.514337)
+SVM Linear: C=16469.566577805694 -> (0.509569, 0.478495)
+SVM com kernel RBF: C=1.2771882945666169, gamma=0.017508268992291267, kernel=rbf -> (0.500239, 0.503584)
 Naive Bayes:  -> (0.493062, 0.456989)
-KNN: n_neighbors=253 -> (0.498565, 0.508961)
-MLP: hidden_layer_sizes=5, max_iter=400 -> (0.505502, 0.521505)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486364, 0.478495)
-GBM: learning_rate=0.2640473778828479, max_depth=4, n_estimators=81 -> (0.501675, 0.523297)
+KNN: n_neighbors=229 -> (0.499282, 0.519713)
+MLP: hidden_layer_sizes=15, max_iter=400 -> (0.500000, 0.469534)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.497608, 0.507168)
+GBM: learning_rate=0.26987855752465373, max_depth=4, n_estimators=88 -> (0.501914, 0.525090)
 
 
-Tempo execução: 29.81 segundos
+Tempo execução: 27.95 segundos
 Melhor modelo: GBM
-Parâmetros: learning_rate=0.2640473778828479, max_depth=4, n_estimators=81
-Score conjunto medida: 0.523297
+Parâmetros: learning_rate=0.26987855752465373, max_depth=4, n_estimators=88
+Score conjunto medida: 0.525090
 
 
 
@@ -166,21 +166,21 @@ Score conjunto medida: 0.523297
 Número de entradas -> 8
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.485269, 0.460573)
-Regressão Logística com Regularização L2: C=0.04313501951135857, max_iter=200, penalty=l2 -> (0.485749, 0.460573)
+Regressão Logística com Regularização L2: C=0.003450516219079452, max_iter=200, penalty=l2 -> (0.485269, 0.462366)
 LDA:  -> (0.485269, 0.460573)
 QDA:  -> (0.496287, 0.460573)
-SVM Linear: C=708.6232852922866 -> (0.508503, 0.478495)
-SVM com kernel RBF: C=672.6505154104213, gamma=0.0025208826150324064, kernel=rbf -> (0.500838, 0.503584)
+SVM Linear: C=492.4442320956804 -> (0.511617, 0.521505)
+SVM com kernel RBF: C=3.2373684442355284, gamma=0.017508268992291267, kernel=rbf -> (0.500599, 0.521505)
 Naive Bayes:  -> (0.496287, 0.460573)
-KNN: n_neighbors=125 -> (0.497006, 0.510753)
-MLP: hidden_layer_sizes=20, max_iter=400 -> (0.501557, 0.521505)
-Arvore de decisão: ccp_alpha=0.003047671501934577 -> (0.487186, 0.478495)
-GBM: learning_rate=0.19795152460122448, max_depth=3, n_estimators=55 -> (0.501078, 0.519713)
+KNN: n_neighbors=299 -> (0.500120, 0.517921)
+MLP: hidden_layer_sizes=10, max_iter=400 -> (0.506347, 0.521505)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.499880, 0.521505)
+GBM: learning_rate=0.26987855752465373, max_depth=3, n_estimators=68 -> (0.501796, 0.519713)
 
 
-Tempo execução: 29.46 segundos
-Melhor modelo: MLP
-Parâmetros: hidden_layer_sizes=20, max_iter=400
+Tempo execução: 30.15 segundos
+Melhor modelo: SVM Linear
+Parâmetros: C=492.4442320956804
 Score conjunto medida: 0.521505
 
 
@@ -189,22 +189,22 @@ Score conjunto medida: 0.521505
 Número de entradas -> 9
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.485988, 0.465950)
-Regressão Logística com Regularização L2: C=0.04313501951135857, max_iter=200, penalty=l2 -> (0.486228, 0.462366)
+Regressão Logística com Regularização L2: C=0.05762721573666136, max_iter=200, penalty=l2 -> (0.486228, 0.462366)
 LDA:  -> (0.485988, 0.464158)
 QDA:  -> (0.495090, 0.456989)
-SVM Linear: C=1580.1019059749194 -> (0.498922, 0.521505)
-SVM com kernel RBF: C=672.6505154104213, gamma=0.0025208826150324064, kernel=rbf -> (0.501317, 0.508961)
+SVM Linear: C=16469.566577805694 -> (0.502036, 0.521505)
+SVM com kernel RBF: C=0.3990944310717145, gamma=0.03736092784292749, kernel=rbf -> (0.501796, 0.519713)
 Naive Bayes:  -> (0.494850, 0.456989)
-KNN: n_neighbors=181 -> (0.497725, 0.525090)
-MLP: hidden_layer_sizes=55, max_iter=400 -> (0.499880, 0.503584)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486946, 0.478495)
-GBM: learning_rate=0.19795152460122448, max_depth=5, n_estimators=81 -> (0.495329, 0.471326)
+KNN: n_neighbors=227 -> (0.505389, 0.516129)
+MLP: hidden_layer_sizes=25, max_iter=400 -> (0.504910, 0.521505)
+Arvore de decisão: ccp_alpha=0.001265748631790493 -> (0.493174, 0.478495)
+GBM: learning_rate=0.1684089673680646, max_depth=5, n_estimators=81 -> (0.491976, 0.496416)
 
 
-Tempo execução: 32.12 segundos
-Melhor modelo: KNN
-Parâmetros: n_neighbors=181
-Score conjunto medida: 0.525090
+Tempo execução: 30.98 segundos
+Melhor modelo: SVM Linear
+Parâmetros: C=16469.566577805694
+Score conjunto medida: 0.521505
 
 
 
@@ -212,21 +212,21 @@ Score conjunto medida: 0.525090
 Número de entradas -> 10
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.488383, 0.462366)
-Regressão Logística com Regularização L2: C=9.260991177859752, max_iter=200, penalty=l2 -> (0.488383, 0.462366)
+Regressão Logística com Regularização L2: C=10.223005061931921, max_iter=200, penalty=l2 -> (0.488383, 0.462366)
 LDA:  -> (0.488383, 0.462366)
 QDA:  -> (0.494850, 0.462366)
-SVM Linear: C=1580.1019059749194 -> (0.509701, 0.480287)
-SVM com kernel RBF: C=672.6505154104213, gamma=0.0025208826150324064, kernel=rbf -> (0.501796, 0.512545)
+SVM Linear: C=356.73150059001614 -> (0.509222, 0.503584)
+SVM com kernel RBF: C=0.3990944310717145, gamma=0.03736092784292749, kernel=rbf -> (0.501557, 0.519713)
 Naive Bayes:  -> (0.494611, 0.462366)
-KNN: n_neighbors=181 -> (0.501078, 0.523297)
-MLP: hidden_layer_sizes=15, max_iter=400 -> (0.504192, 0.519713)
-Arvore de decisão: ccp_alpha=0.003047671501934577 -> (0.487665, 0.478495)
-GBM: learning_rate=0.22474792763733994, max_depth=4, n_estimators=81 -> (0.493892, 0.512545)
+KNN: n_neighbors=229 -> (0.500599, 0.523297)
+MLP: hidden_layer_sizes=35, max_iter=400 -> (0.504910, 0.521505)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.495090, 0.478495)
+GBM: learning_rate=0.25800854338020357, max_depth=4, n_estimators=68 -> (0.495090, 0.512545)
 
 
-Tempo execução: 32.24 segundos
+Tempo execução: 34.09 segundos
 Melhor modelo: KNN
-Parâmetros: n_neighbors=181
+Parâmetros: n_neighbors=229
 Score conjunto medida: 0.523297
 
 
@@ -235,22 +235,22 @@ Score conjunto medida: 0.523297
 Número de entradas -> 11
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.491976, 0.462366)
-Regressão Logística com Regularização L2: C=0.02775842120357964, max_iter=200, penalty=l2 -> (0.492216, 0.458781)
+Regressão Logística com Regularização L2: C=0.0012665962680961736, max_iter=200, penalty=l2 -> (0.492455, 0.478495)
 LDA:  -> (0.491976, 0.462366)
 QDA:  -> (0.497246, 0.456989)
-SVM Linear: C=70.41568016985414 -> (0.501557, 0.478495)
-SVM com kernel RBF: C=672.6505154104213, gamma=0.0025208826150324064, kernel=rbf -> (0.501796, 0.512545)
+SVM Linear: C=2273.302682434829 -> (0.499162, 0.521505)
+SVM com kernel RBF: C=55.09172415868063, gamma=0.01168835582019618, kernel=rbf -> (0.499880, 0.516129)
 Naive Bayes:  -> (0.497246, 0.456989)
-KNN: n_neighbors=125 -> (0.500120, 0.537634)
-MLP: hidden_layer_sizes=25, max_iter=400 -> (0.503234, 0.519713)
-Arvore de decisão: ccp_alpha=0.003047671501934577 -> (0.487425, 0.478495)
-GBM: learning_rate=0.2640473778828479, max_depth=3, n_estimators=58 -> (0.505868, 0.483871)
+KNN: n_neighbors=227 -> (0.503952, 0.525090)
+MLP: hidden_layer_sizes=95, max_iter=400 -> (0.501557, 0.521505)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.498683, 0.478495)
+GBM: learning_rate=0.22057163937940827, max_depth=3, n_estimators=54 -> (0.504910, 0.510753)
 
 
-Tempo execução: 33.55 segundos
+Tempo execução: 37.04 segundos
 Melhor modelo: KNN
-Parâmetros: n_neighbors=125
-Score conjunto medida: 0.537634
+Parâmetros: n_neighbors=227
+Score conjunto medida: 0.525090
 
 
 
@@ -258,22 +258,22 @@ Score conjunto medida: 0.537634
 Número de entradas -> 12
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.489341, 0.462366)
-Regressão Logística com Regularização L2: C=9.260991177859752, max_iter=200, penalty=l2 -> (0.489820, 0.462366)
+Regressão Logística com Regularização L2: C=10.223005061931921, max_iter=200, penalty=l2 -> (0.489820, 0.462366)
 LDA:  -> (0.489581, 0.462366)
 QDA:  -> (0.496048, 0.456989)
-SVM Linear: C=1580.1019059749194 -> (0.502754, 0.521505)
-SVM com kernel RBF: C=672.6505154104213, gamma=0.0025208826150324064, kernel=rbf -> (0.501317, 0.516129)
+SVM Linear: C=356.73150059001614 -> (0.503473, 0.478495)
+SVM com kernel RBF: C=1.2771882945666169, gamma=0.017508268992291267, kernel=rbf -> (0.500120, 0.510753)
 Naive Bayes:  -> (0.496527, 0.456989)
-KNN: n_neighbors=129 -> (0.499162, 0.534050)
-MLP: hidden_layer_sizes=25, max_iter=400 -> (0.500838, 0.521505)
-Arvore de decisão: ccp_alpha=0.003047671501934577 -> (0.487186, 0.478495)
-GBM: learning_rate=0.19795152460122448, max_depth=5, n_estimators=81 -> (0.502754, 0.512545)
+KNN: n_neighbors=201 -> (0.500838, 0.526882)
+MLP: hidden_layer_sizes=15, max_iter=400 -> (0.499401, 0.517921)
+Arvore de decisão: ccp_alpha=0.00043415647681873895 -> (0.497246, 0.478495)
+GBM: learning_rate=0.26987855752465373, max_depth=5, n_estimators=81 -> (0.503713, 0.526882)
 
 
-Tempo execução: 35.23 segundos
+Tempo execução: 36.39 segundos
 Melhor modelo: KNN
-Parâmetros: n_neighbors=129
-Score conjunto medida: 0.534050
+Parâmetros: n_neighbors=201
+Score conjunto medida: 0.526882
 
 
 
@@ -281,22 +281,22 @@ Score conjunto medida: 0.534050
 Número de entradas -> 13
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.492455, 0.453405)
-Regressão Logística com Regularização L2: C=0.003875361811798551, max_iter=200, penalty=l2 -> (0.492934, 0.455197)
+Regressão Logística com Regularização L2: C=0.05762721573666136, max_iter=200, penalty=l2 -> (0.492934, 0.453405)
 LDA:  -> (0.492455, 0.453405)
 QDA:  -> (0.496527, 0.478495)
-SVM Linear: C=30.264975835000474 -> (0.509701, 0.478495)
-SVM com kernel RBF: C=0.3614465813424658, gamma=0.0305135455488413, kernel=rbf -> (0.502275, 0.516129)
+SVM Linear: C=2273.302682434829 -> (0.509940, 0.521505)
+SVM com kernel RBF: C=6325.235610964958, gamma=7.939293018902375, kernel=rbf -> (0.502754, 0.548387)
 Naive Bayes:  -> (0.496766, 0.478495)
-KNN: n_neighbors=251 -> (0.500120, 0.534050)
-MLP: hidden_layer_sizes=200, max_iter=400 -> (0.498204, 0.503584)
-Arvore de decisão: ccp_alpha=0.0319958459183585 -> (0.486946, 0.478495)
-GBM: learning_rate=0.2640473778828479, max_depth=3, n_estimators=81 -> (0.493653, 0.498208)
+KNN: n_neighbors=244 -> (0.501317, 0.526882)
+MLP: hidden_layer_sizes=20, max_iter=400 -> (0.500120, 0.517921)
+Arvore de decisão: ccp_alpha=0.002427644773261082 -> (0.489820, 0.478495)
+GBM: learning_rate=0.2715551307766882, max_depth=3, n_estimators=55 -> (0.493413, 0.503584)
 
 
-Tempo execução: 34.90 segundos
-Melhor modelo: KNN
-Parâmetros: n_neighbors=251
-Score conjunto medida: 0.534050
+Tempo execução: 58.97 segundos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=6325.235610964958, gamma=7.939293018902375, kernel=rbf
+Score conjunto medida: 0.548387
 
 
 
@@ -304,22 +304,22 @@ Score conjunto medida: 0.534050
 Número de entradas -> 14
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.496643, 0.469534)
-Regressão Logística com Regularização L2: C=9.260991177859752, max_iter=200, penalty=l2 -> (0.496882, 0.469534)
+Regressão Logística com Regularização L2: C=0.0012665962680961736, max_iter=200, penalty=l2 -> (0.496882, 0.478495)
 LDA:  -> (0.496643, 0.469534)
 QDA:  -> (0.497362, 0.478495)
-SVM Linear: C=70.41568016985414 -> (0.512470, 0.478495)
-SVM com kernel RBF: C=672.6505154104213, gamma=0.0025208826150324064, kernel=rbf -> (0.500480, 0.516129)
+SVM Linear: C=356.73150059001614 -> (0.512710, 0.510753)
+SVM com kernel RBF: C=0.3990944310717145, gamma=0.03736092784292749, kernel=rbf -> (0.501199, 0.510753)
 Naive Bayes:  -> (0.497602, 0.478495)
-KNN: n_neighbors=253 -> (0.500719, 0.525090)
-MLP: hidden_layer_sizes=25, max_iter=400 -> (0.500000, 0.496416)
-Arvore de decisão: ccp_alpha=0.004623736379756691 -> (0.487530, 0.478495)
-GBM: learning_rate=0.23891677122923946, max_depth=5, n_estimators=65 -> (0.501199, 0.544803)
+KNN: n_neighbors=244 -> (0.500240, 0.532258)
+MLP: hidden_layer_sizes=20, max_iter=400 -> (0.501439, 0.498208)
+Arvore de decisão: ccp_alpha=0.002427644773261082 -> (0.487770, 0.478495)
+GBM: learning_rate=0.25800854338020357, max_depth=5, n_estimators=55 -> (0.501199, 0.546595)
 
 
-Tempo execução: 36.28 segundos
+Tempo execução: 31.89 segundos
 Melhor modelo: GBM
-Parâmetros: learning_rate=0.23891677122923946, max_depth=5, n_estimators=65
-Score conjunto medida: 0.544803
+Parâmetros: learning_rate=0.25800854338020357, max_depth=5, n_estimators=55
+Score conjunto medida: 0.546595
 
 
 
@@ -327,29 +327,29 @@ Score conjunto medida: 0.544803
 Número de entradas -> 15
 O PCA deixou 1 atributos
 Regressão Logística (sem regularização):  -> (0.496643, 0.478495)
-Regressão Logística com Regularização L2: C=0.0035149304254053497, max_iter=200, penalty=l2 -> (0.497362, 0.478495)
+Regressão Logística com Regularização L2: C=0.0012665962680961736, max_iter=200, penalty=l2 -> (0.497842, 0.478495)
 LDA:  -> (0.496643, 0.478495)
 QDA:  -> (0.498801, 0.478495)
-SVM Linear: C=708.6232852922866 -> (0.508633, 0.480287)
-SVM com kernel RBF: C=0.9461462904890385, gamma=0.005785914391123155, kernel=rbf -> (0.499281, 0.478495)
+SVM Linear: C=477.3737065228826 -> (0.501918, 0.489247)
+SVM com kernel RBF: C=0.3990944310717145, gamma=0.03736092784292749, kernel=rbf -> (0.503357, 0.503584)
 Naive Bayes:  -> (0.498561, 0.478495)
-KNN: n_neighbors=129 -> (0.501199, 0.544803)
-MLP: hidden_layer_sizes=60, max_iter=400 -> (0.502878, 0.521505)
-Arvore de decisão: ccp_alpha=0.003047671501934577 -> (0.487290, 0.478495)
-GBM: learning_rate=0.2640473778828479, max_depth=5, n_estimators=65 -> (0.496403, 0.525090)
+KNN: n_neighbors=444 -> (0.498801, 0.532258)
+MLP: hidden_layer_sizes=5, max_iter=400 -> (0.500719, 0.478495)
+Arvore de decisão: ccp_alpha=0.001265748631790493 -> (0.492566, 0.478495)
+GBM: learning_rate=0.25800854338020357, max_depth=5, n_estimators=54 -> (0.497602, 0.512545)
 
 
-Tempo execução: 37.57 segundos
+Tempo execução: 34.25 segundos
 Melhor modelo: KNN
-Parâmetros: n_neighbors=129
-Score conjunto medida: 0.544803
+Parâmetros: n_neighbors=444
+Score conjunto medida: 0.532258
 
 
 ====================================================================================================
 ====================================================================================================
 ====================================================================================================
-Tempo execução: 8.02 minutos
-Melhor número entradas: 14
-Melhor modelo: GBM
-Melhores parâmetros: learning_rate=0.23891677122923946, max_depth=5, n_estimators=65
-Melhor acurária conjunto medida: 0.544803
+Tempo execução: 7.89 minutos
+Melhor número entradas: 13
+Melhor modelo: SVM com kernel RBF
+Melhores parâmetros: C=6325.235610964958, gamma=7.939293018902375, kernel=rbf
+Melhor acurária conjunto medida: 0.548387
