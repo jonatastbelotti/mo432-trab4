@@ -1,0 +1,304 @@
+Arquivo de entrada: ./dados4.csv com 5581 registros
+Foram corrigidos 62 registros nulos
+
+====================================================================================================
+Número de entradas -> 2
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.008433, 0.954186)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.008433, 0.954186)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.012118, 0.950183)
+SVM Linear: C=5.476115635072734, epsilon=0.1 -> (0.066647, 2.037117)
+SVM com kernel RBF: C=27439.5622833377, epsilon=0.1, gamma=0.04787929158089104, kernel=rbf -> (0.055124, 0.953560)
+KNN: n_neighbors=66 -> (0.046862, 0.951100)
+MLP: hidden_layer_sizes=115, max_iter=400 -> (0.034328, 0.826011)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.137659, 16.791642)
+GBM: learning_rate=0.16767025126989787, max_depth=5, n_estimators=94 -> (0.035905, 0.945383)
+
+
+Tempo execução: 2.54 minutos
+Melhor modelo: MLP
+Parâmetros: hidden_layer_sizes=115, max_iter=400
+Score conjunto medida: 0.826011
+
+
+
+====================================================================================================
+Número de entradas -> 3
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.009420, 0.942475)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.009420, 0.942475)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.012169, 0.939820)
+SVM Linear: C=4.8920227635369775, epsilon=0.1 -> (0.063894, 1.260504)
+SVM com kernel RBF: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf -> (0.055142, 0.403048)
+KNN: n_neighbors=66 -> (0.047704, 0.938685)
+MLP: hidden_layer_sizes=70, max_iter=400 -> (0.022308, 0.799183)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138115, 16.415808)
+GBM: learning_rate=0.16767025126989787, max_depth=5, n_estimators=92 -> (0.037863, 0.935756)
+
+
+Tempo execução: 2.55 minutos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf
+Score conjunto medida: 0.403048
+
+
+
+====================================================================================================
+Número de entradas -> 4
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.010362, 0.929556)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.010362, 0.929556)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.012585, 0.927555)
+SVM Linear: C=4.8920227635369775, epsilon=0.1 -> (0.061449, 0.638649)
+SVM com kernel RBF: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf -> (0.055531, 0.373315)
+KNN: n_neighbors=66 -> (0.048527, 0.926868)
+MLP: hidden_layer_sizes=75, max_iter=400 -> (0.024920, 0.794567)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.137966, 16.667161)
+GBM: learning_rate=0.12360080972368662, max_depth=5, n_estimators=86 -> (0.039054, 0.922639)
+
+
+Tempo execução: 2.66 minutos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf
+Score conjunto medida: 0.373315
+
+
+
+====================================================================================================
+Número de entradas -> 5
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.011263, 0.916940)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.011263, 0.916940)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.013161, 0.915311)
+SVM Linear: C=5178.028376149601, epsilon=0.1 -> (0.059836, 0.256045)
+SVM com kernel RBF: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf -> (0.057116, 0.353830)
+KNN: n_neighbors=66 -> (0.049371, 0.913322)
+MLP: hidden_layer_sizes=60, max_iter=400 -> (0.036255, 0.889471)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.137933, 14.769840)
+GBM: learning_rate=0.14717588246718083, max_depth=3, n_estimators=92 -> (0.040758, 0.906711)
+
+
+Tempo execução: 2.71 minutos
+Melhor modelo: SVM Linear
+Parâmetros: C=5178.028376149601, epsilon=0.1
+Score conjunto medida: 0.256045
+
+
+
+====================================================================================================
+Número de entradas -> 6
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.012118, 0.904538)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.012118, 0.904538)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.013786, 0.903136)
+SVM Linear: C=1117.1469151558658, epsilon=0.1 -> (0.059743, 0.117257)
+SVM com kernel RBF: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf -> (0.060031, 0.155380)
+KNN: n_neighbors=66 -> (0.050071, 0.900344)
+MLP: hidden_layer_sizes=185, max_iter=400 -> (0.023381, 0.774384)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138440, 16.319253)
+GBM: learning_rate=0.07900925039466812, max_depth=3, n_estimators=68 -> (0.041915, 0.898795)
+
+
+Tempo execução: 2.69 minutos
+Melhor modelo: SVM Linear
+Parâmetros: C=1117.1469151558658, epsilon=0.1
+Score conjunto medida: 0.117257
+
+
+
+====================================================================================================
+Número de entradas -> 7
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.012919, 0.893064)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.012919, 0.893064)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.014419, 0.891807)
+SVM Linear: C=4.8920227635369775, epsilon=0.1 -> (0.059727, 0.451199)
+SVM com kernel RBF: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf -> (0.062706, 0.008767)
+KNN: n_neighbors=66 -> (0.050858, 0.888574)
+MLP: hidden_layer_sizes=125, max_iter=400 -> (0.029510, 0.713620)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138335, 15.896425)
+GBM: learning_rate=0.12360080972368662, max_depth=5, n_estimators=57 -> (0.041142, 0.887251)
+
+
+Tempo execução: 2.68 minutos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf
+Score conjunto medida: 0.008767
+
+
+
+====================================================================================================
+Número de entradas -> 8
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.013717, 0.882321)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.013717, 0.882321)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.015121, 0.881173)
+SVM Linear: C=3671.742991803773, epsilon=0.1 -> (0.061158, 0.399586)
+SVM com kernel RBF: C=27439.5622833377, epsilon=0.1, gamma=0.004398499899069787, kernel=rbf -> (0.060625, 0.570814)
+KNN: n_neighbors=66 -> (0.051729, 0.877224)
+MLP: hidden_layer_sizes=200, max_iter=400 -> (0.034430, 0.848586)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138628, 16.193284)
+GBM: learning_rate=0.14717588246718083, max_depth=3, n_estimators=94 -> (0.043162, 0.876849)
+
+
+Tempo execução: 2.76 minutos
+Melhor modelo: SVM Linear
+Parâmetros: C=3671.742991803773, epsilon=0.1
+Score conjunto medida: 0.399586
+
+
+
+====================================================================================================
+Número de entradas -> 9
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.014487, 0.872857)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.014487, 0.872857)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.015799, 0.871769)
+SVM Linear: C=2.860228859674502, epsilon=0.1 -> (0.059330, 0.843454)
+SVM com kernel RBF: C=0.5835137048280099, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf -> (0.064381, 0.696279)
+KNN: n_neighbors=66 -> (0.052509, 0.867541)
+MLP: hidden_layer_sizes=30, max_iter=400 -> (0.042504, 0.066468)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138944, 16.083458)
+GBM: learning_rate=0.16973078868296282, max_depth=4, n_estimators=68 -> (0.044141, 0.864866)
+
+
+Tempo execução: 2.72 minutos
+Melhor modelo: MLP
+Parâmetros: hidden_layer_sizes=30, max_iter=400
+Score conjunto medida: 0.066468
+
+
+
+====================================================================================================
+Número de entradas -> 10
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.015229, 0.864896)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.015229, 0.864896)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.016465, 0.863836)
+SVM Linear: C=2.860228859674502, epsilon=0.1 -> (0.060187, 0.812643)
+SVM com kernel RBF: C=0.888433110603634, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf -> (0.064122, 0.836098)
+KNN: n_neighbors=66 -> (0.053208, 0.857563)
+MLP: hidden_layer_sizes=145, max_iter=400 -> (0.037614, 0.849006)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138643, 16.240204)
+GBM: learning_rate=0.16767025126989787, max_depth=4, n_estimators=71 -> (0.044819, 0.854689)
+
+
+Tempo execução: 2.83 minutos
+Melhor modelo: SVM Linear
+Parâmetros: C=2.860228859674502, epsilon=0.1
+Score conjunto medida: 0.812643
+
+
+
+====================================================================================================
+Número de entradas -> 11
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.015939, 0.858267)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.015939, 0.858267)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.017114, 0.857211)
+SVM Linear: C=4.8920227635369775, epsilon=0.1 -> (0.058665, 0.838571)
+SVM com kernel RBF: C=0.5835137048280099, epsilon=0.1, gamma=0.004842063295010962, kernel=rbf -> (0.063287, 0.282200)
+KNN: n_neighbors=66 -> (0.053834, 0.849717)
+MLP: hidden_layer_sizes=115, max_iter=400 -> (0.031411, 0.467421)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138562, 15.717196)
+GBM: learning_rate=0.24474149116225585, max_depth=5, n_estimators=68 -> (0.045351, 0.837185)
+
+
+Tempo execução: 2.71 minutos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=0.5835137048280099, epsilon=0.1, gamma=0.004842063295010962, kernel=rbf
+Score conjunto medida: 0.282200
+
+
+
+====================================================================================================
+Número de entradas -> 12
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.016626, 0.852569)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.016626, 0.852569)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.017751, 0.851503)
+SVM Linear: C=2.860228859674502, epsilon=0.1 -> (0.058621, 0.472786)
+SVM com kernel RBF: C=0.5835137048280099, epsilon=0.1, gamma=0.004842063295010962, kernel=rbf -> (0.062545, 0.126186)
+KNN: n_neighbors=66 -> (0.054437, 0.842961)
+MLP: hidden_layer_sizes=90, max_iter=400 -> (0.034883, 0.766316)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.139018, 15.733228)
+GBM: learning_rate=0.07900925039466812, max_depth=2, n_estimators=86 -> (0.046726, 0.844413)
+
+
+Tempo execução: 2.69 minutos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=0.5835137048280099, epsilon=0.1, gamma=0.004842063295010962, kernel=rbf
+Score conjunto medida: 0.126186
+
+
+
+====================================================================================================
+Número de entradas -> 13
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.017296, 0.847287)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.017296, 0.847287)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.018378, 0.846201)
+SVM Linear: C=2.860228859674502, epsilon=0.1 -> (0.058072, 0.260648)
+SVM com kernel RBF: C=0.5835137048280099, epsilon=0.1, gamma=0.004842063295010962, kernel=rbf -> (0.061766, 0.457065)
+KNN: n_neighbors=66 -> (0.055160, 0.837590)
+MLP: hidden_layer_sizes=130, max_iter=400 -> (0.035171, 0.799649)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138718, 15.897588)
+GBM: learning_rate=0.1630260983919196, max_depth=3, n_estimators=94 -> (0.046774, 0.835955)
+
+
+Tempo execução: 2.77 minutos
+Melhor modelo: SVM Linear
+Parâmetros: C=2.860228859674502, epsilon=0.1
+Score conjunto medida: 0.260648
+
+
+
+====================================================================================================
+Número de entradas -> 14
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.017951, 0.842197)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.017951, 0.842197)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.019006, 0.841087)
+SVM Linear: C=2.860228859674502, epsilon=0.1 -> (0.059613, 0.657435)
+SVM com kernel RBF: C=0.5835137048280099, epsilon=0.1, gamma=0.004398499899069787, kernel=rbf -> (0.061598, 0.494331)
+KNN: n_neighbors=66 -> (0.055943, 0.834239)
+MLP: hidden_layer_sizes=25, max_iter=400 -> (0.053975, 1.848448)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138794, 15.775228)
+GBM: learning_rate=0.16767025126989787, max_depth=5, n_estimators=92 -> (0.047581, 0.826601)
+
+
+Tempo execução: 2.75 minutos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=0.5835137048280099, epsilon=0.1, gamma=0.004398499899069787, kernel=rbf
+Score conjunto medida: 0.494331
+
+
+
+====================================================================================================
+Número de entradas -> 15
+O PCA deixou 1 atributos
+Regressão Linear:  -> (0.018581, 0.837513)
+Linear com regularização L2: alpha=0.0020151150878888946 -> (0.018581, 0.837513)
+Linear com regularização L1: alpha=0.004533422047775549 -> (0.019604, 0.836374)
+SVM Linear: C=2.860228859674502, epsilon=0.1 -> (0.059707, 0.610149)
+SVM com kernel RBF: C=0.5835137048280099, epsilon=0.1, gamma=0.004398499899069787, kernel=rbf -> (0.061986, 0.580549)
+KNN: n_neighbors=66 -> (0.056600, 0.830796)
+MLP: hidden_layer_sizes=80, max_iter=400 -> (0.035244, 0.784388)
+Árvore de decisão: ccp_alpha=0.012120829017861415 -> (0.138569, 15.667373)
+GBM: learning_rate=0.07900925039466812, max_depth=3, n_estimators=94 -> (0.048603, 0.824104)
+
+
+Tempo execução: 2.82 minutos
+Melhor modelo: SVM com kernel RBF
+Parâmetros: C=0.5835137048280099, epsilon=0.1, gamma=0.004398499899069787, kernel=rbf
+Score conjunto medida: 0.580549
+
+
+====================================================================================================
+====================================================================================================
+====================================================================================================
+Tempo execução: 37.88 minutos
+Melhor número entradas: 7
+Melhor modelo: SVM com kernel RBF
+Melhores parâmetros: C=27439.5622833377, epsilon=0.1, gamma=0.011642704429963638, kernel=rbf
+Melhor RMSE conjunto medida: 0.008767
