@@ -1,9 +1,10 @@
 import numpy as np
 import random
+import time
 
 from trab4.dados import Dados
 from trab4.treinador import Treinador
-from trab4.lib import dict_string
+from trab4.lib import dict_string, format_tempo
 from sklearn.linear_model import LogisticRegression
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
@@ -50,58 +51,58 @@ if __name__ == "__main__":
             'classe': QuadraticDiscriminantAnalysis,
             'parametros': {}
         },
-        # {
-        #     'nome': "SVM Linear",
-        #     'classe': LinearSVC,
-        #     'parametros': {
-        #         'C': 2 ** np.random.uniform(-5, 15, 10)
-        #     }
-        # },
-        # {
-        #     'nome': "SVM com kernel RBF",
-        #     'classe': SVC,
-        #     'parametros': {
-        #         'kernel': ["rbf"],
-        #         'C': 2 ** np.random.uniform(-5, 15, 5),
-        #         'gamma': 2 ** np.random.uniform(-9, 3, 5)
-        #     }
-        # },
-        # {
-        #     'nome': "Naive Bayes",
-        #     'classe': GaussianNB,
-        #     'parametros': {}
-        # },
-        # {
-        #     'nome': "KNN",
-        #     'classe': KNeighborsClassifier,
-        #     'parametros': {
-        #         'n_neighbors': random.choices(np.arange(1, 302, 2), k=10)
-        #     }
-        # },
-        # {
-        #     'nome': "MLP",
-        #     'classe': MLPClassifier,
-        #     'parametros': {
-        #         'max_iter': [400],
-        #         'hidden_layer_sizes': np.arange(5, 100+1, 5)
-        #     }
-        # },
-        # {
-        #     'nome': "Arvore de decisão",
-        #     'classe': DecisionTreeClassifier,
-        #     'parametros': {
-        #         'ccp_alpha': np.random.uniform(0, 0.04, 10)
-        #     }
-        # },
-        # {
-        #     'nome': "GBM",
-        #     'classe': GradientBoostingClassifier,
-        #     'parametros': {
-        #         'n_estimators': np.random.uniform(5, 100, 5).astype("int32"),
-        #         'learning_rate': np.random.uniform(0.01, 0.3, 5),
-        #         'max_depth': [2, 3, 4, 5]
-        #     }
-        # }
+        {
+            'nome': "SVM Linear",
+            'classe': LinearSVC,
+            'parametros': {
+                'C': 2 ** np.random.uniform(-5, 15, 10)
+            }
+        },
+        {
+            'nome': "SVM com kernel RBF",
+            'classe': SVC,
+            'parametros': {
+                'kernel': ["rbf"],
+                'C': 2 ** np.random.uniform(-5, 15, 10),
+                'gamma': 2 ** np.random.uniform(-9, 3, 10)
+            }
+        },
+        {
+            'nome': "Naive Bayes",
+            'classe': GaussianNB,
+            'parametros': {}
+        },
+        {
+            'nome': "KNN",
+            'classe': KNeighborsClassifier,
+            'parametros': {
+                'n_neighbors': random.choices(np.arange(1, 302, 2), k=10)
+            }
+        },
+        {
+            'nome': "MLP",
+            'classe': MLPClassifier,
+            'parametros': {
+                'max_iter': [400],
+                'hidden_layer_sizes': np.arange(5, 200+1, 5)
+            }
+        },
+        {
+            'nome': "Arvore de decisão",
+            'classe': DecisionTreeClassifier,
+            'parametros': {
+                'ccp_alpha': np.random.uniform(0, 0.04, 10)
+            }
+        },
+        {
+            'nome': "GBM",
+            'classe': GradientBoostingClassifier,
+            'parametros': {
+                'n_estimators': np.random.uniform(5, 100, 10).astype("int32"),
+                'learning_rate': np.random.uniform(0.01, 0.3, 10),
+                'max_depth': [2, 3, 4, 5]
+            }
+        }
     ]
 
     # Lendo os dados de entrada
@@ -111,12 +112,13 @@ if __name__ == "__main__":
     melhor_modelo = None
     melhor_parametros = None
     melhor_score = float("-inf")
+    tempo_inicial = time.time()
 
     for num_entradas in np.arange(1, 5+1, 1):
         print("\n====================================================================================================")
         print("Número de entradas -> %d" % num_entradas)
 
-        x_treino, y_treino, x_medida, y_medida = dados.get_dados_classificacao(num_entradas)
+        x_treino, y_treino, x_medida, y_medida = dados.get_dados_classificacao(num_entradas, faz_cs=True, faz_pca=True)
 
         treinador = Treinador()
         treinador.treinar_modelo(x_treino, y_treino, x_medida, y_medida, MODELOS, scoring="accuracy", maior_melhor=True)
@@ -130,10 +132,15 @@ if __name__ == "__main__":
 
         print("\n")
 
+    # Calculando tempo total
+    tempo_final = time.time()
+    tempo_total = tempo_final - tempo_inicial
+
     # Imprimindo melhor resultado entre todos números de entradas
     print("====================================================================================================")
     print("====================================================================================================")
     print("====================================================================================================")
+    print("Tempo execução: %s" % format_tempo(tempo_total))
     print("Melhor número entradas: %d" % melhor_num_entradas)
     print("Melhor modelo: %s" % melhor_modelo['nome'])
     print("Melhores parâmetros: %s" % dict_string(melhor_parametros))
