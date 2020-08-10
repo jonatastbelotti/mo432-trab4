@@ -78,6 +78,7 @@ if __name__ == "__main__":
             'nome': "MLP",
             'classe': MLPRegressor,
             'parametros': {
+                'max_iter': [400],
                 'hidden_layer_sizes': np.arange(5, 200+1, 5)
             }
         },

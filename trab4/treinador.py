@@ -5,7 +5,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import TimeSeriesSplit
 
 # Número de núcleos que serão utilizados, -1 usa todos, -2 deixa um sem usar
-N_JOBS = -2
+N_JOBS = -1
 
 
 class Treinador():
