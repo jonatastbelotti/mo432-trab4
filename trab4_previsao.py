@@ -71,7 +71,7 @@ if __name__ == "__main__":
             'nome': "KNN",
             'classe': KNeighborsRegressor,
             'parametros': {
-                'n_neighbors': np.random.uniform(1, 1000+1, 10)
+                'n_neighbors': np.random.uniform(1, 500+1, 10).astype("int32")
             }
         },
         {

@@ -76,7 +76,7 @@ if __name__ == "__main__":
             'nome': "KNN",
             'classe': KNeighborsClassifier,
             'parametros': {
-                'n_neighbors': random.choices(np.arange(1, 302, 2), k=10)
+                'n_neighbors': np.random.uniform(1, 500+1, 10).astype("int32")
             }
         },
         {
